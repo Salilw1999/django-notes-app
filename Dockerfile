@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.9-slim
 
 WORKDIR /app/backend
 
@@ -18,3 +18,4 @@ COPY . /app/backend
 EXPOSE 8000
 #RUN python manage.py migrate
 #RUN python manage.py makemigrations
+CMD ["python", "manage.py"]
